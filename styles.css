@@ -1,0 +1,224 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url(./fonts/KumbhSans-Medium.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url(./fonts/KumbhSans-Bold.ttf);
+  font-weight: 700;
+}
+:root {
+  --clr-primary-1: 238, 29%, 16%;
+  --clr-primary-2: 14, 88%, 65%;
+  --clr-gradient-1: 273, 75%, 66%;
+  --clr-gradient-2: 240, 73%, 65%;
+  --gradient: linear-gradient(hsl(var(--clr-gradient-1)), hsl(var(--clr-gradient-2)));
+  --clr-neutral-1: 237, 12%, 33%;
+  --clr-neutral-2: 240, 6%, 50%;
+  --clr-neutral-3: 0, 0%, 100%;
+  --clr-divide: 240, 5%, 91%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: hsl(var(--clr-neutral-1));
+  background: var(--gradient);
+  padding: 0 3rem;
+  display: grid;
+  place-content: center;
+}
+@media (max-width: 960px) {
+  body {
+    padding-inline: 1.5rem;
+    padding-block: 9.25rem 5.3rem;
+  }
+}
+
+ul[role=list] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 57.5rem;
+  padding-block: 4.06rem 5.19rem;
+  padding-left: 29.69rem;
+  padding-right: clamp(1rem, 9vw, 5.94rem);
+  position: relative;
+  background: hsl(var(--clr-neutral-3));
+  border-radius: 1.4375rem;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.5);
+  background-image: url(./images/illustration-woman-online-desktop.svg), url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -18.7% center, -36rem 68%;
+  background-size: 29.5rem auto, auto;
+}
+@media (max-width: 960px) {
+  .container {
+    padding-inline: 1.5rem;
+    padding-block: 8.25rem 3rem;
+    width: 100%;
+    background-image: none;
+    position: relative;
+  }
+  .container::before {
+    content: "";
+    position: absolute;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 15rem auto;
+    width: 15rem;
+    height: 15.25rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.box-pic {
+  display: block;
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-25%);
+}
+@media (max-width: 960px) {
+  .box-pic {
+    display: none;
+  }
+}
+
+.main-pic-mobile {
+  display: none;
+}
+@media (max-width: 960px) {
+  .main-pic-mobile {
+    max-width: 14.8125rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -6.7rem;
+    transform: translateX(-50%);
+  }
+}
+
+.faq-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 21.875rem;
+  position: relative;
+}
+@media (max-width: 960px) {
+  .faq-wrapper {
+    max-width: 35rem;
+  }
+}
+
+h1 {
+  color: hsl(var(--clr-primary-1));
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.68rem;
+  line-height: 2rem;
+}
+@media (max-width: 960px) {
+  h1 {
+    text-align: center;
+    margin-bottom: 1.31rem;
+  }
+}
+
+.info-item {
+  border-bottom: 0.0625rem solid hsl(var(--clr-divide));
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 1.13rem 0 0.13rem;
+  background-color: hsl(var(--clr-neutral-3));
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  color: hsl(var(--clr-neutral-1));
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+@media (max-width: 960px) {
+  .accordion {
+    font-size: 0.8125rem;
+  }
+}
+.accordion::after {
+  content: url(./images/icon-arrow-down.svg);
+  float: right;
+  margin-right: 1rem;
+}
+
+.active {
+  color: hsl(var(--clr-primary-1));
+  font-weight: 700;
+  padding: 1.12rem 0 0.81rem;
+}
+
+.accordion:hover {
+  color: hsl(var(--clr-primary-2));
+}
+
+.active:after {
+  content: url(./images/icon-arrow-down.svg);
+  float: right;
+  margin-right: 1rem;
+  transform: rotate(180deg);
+}
+
+.description {
+  margin-bottom: 1rem;
+  background-color: hsl(var(--clr-neutral-3));
+  color: hsl(var(--clr-neutral-2));
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  padding-right: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
