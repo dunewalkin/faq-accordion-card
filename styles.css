@@ -150,7 +150,7 @@ ul[role=list] {
   }
 }
 
-h1 {
+.faq-header {
   color: hsl(var(--clr-primary-1));
   font-size: 2rem;
   font-weight: 700;
@@ -159,7 +159,7 @@ h1 {
   line-height: 2rem;
 }
 @media (max-width: 960px) {
-  h1 {
+  .faq-header {
     text-align: center;
     margin-bottom: 1.31rem;
   }

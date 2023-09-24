@@ -154,29 +154,9 @@ ul[role="list"] {
    @media (max-width: 960px) {
       max-width: 35rem;
    }
-
-   // &::before{
-   //    content: ''; /* Add content to the pseudo-element */
-   //    position: absolute; /* Set the pseudo-element to an absolute position */
-   //    top: -1.75rem;
-   //    left: 0; /* Position it on the left side */
-   //    width: 100%; /* Set the width of the border */
-   //    height: 1px; /* Make it the full height of the parent div */
-   //    background-color: #000; /* Adjust the color as needed */
-   // }
-
-   // &::after{
-   //    content: ''; /* Add content to the pseudo-element */
-   //    position: absolute; /* Set the pseudo-element to an absolute position */
-   //    top: -3.75rem;
-   //    left: 0; /* Position it on the left side */
-   //    width: 100%; /* Set the width of the border */
-   //    height: 1px; /* Make it the full height of the parent div */
-   //    background-color:red; /* Adjust the color as needed */
-   // }
 }
 
-h1 {
+.faq-header {
    color: hsl(var(--clr-primary-1));
    font-size: 2rem;
    font-weight: 700;
